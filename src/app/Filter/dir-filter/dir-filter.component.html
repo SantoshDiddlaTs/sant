@@ -1,0 +1,53 @@
+<div class="container">
+  <h2 class="py-4">Cars</h2>
+
+  
+<div class="col-md-12">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Search..."  [(ngModel)]="searchText">
+  </mat-form-field>
+</div>
+
+
+
+
+  <!-- <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Brand</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr >
+        <td></td>
+      </tr>
+    </tbody>
+  </table> -->
+
+<div *ngIf="(cars | filter: searchText).length > 0; else noResults">
+  <mat-chip-list aria-label="Fish selection" class="w-100" *ngFor="let car of cars | filter: searchText; let i = index"  >
+      <mat-chip color="accent" selected >
+        {{car.brand}}
+      </mat-chip>
+  </mat-chip-list>
+</div>
+  
+
+
+
+
+
+ 
+
+
+
+
+  <ng-template #noResults>
+    <p>No results found for "{{searchText}}".</p>
+  </ng-template>
+
+  <div class="col-md-12 text-center">
+    <button type="button" class="btn btn-primary btn-lg" [routerLink]="['/rx_filter']">RX Filter</button>
+  </div>
+</div>
+
