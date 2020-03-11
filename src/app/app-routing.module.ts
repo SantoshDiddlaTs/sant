@@ -8,7 +8,16 @@ import { RxFilterComponent } from './Filter/rx-filter/rx-filter.component';
 const routes: Routes = [
   { path: '', component: ShowDateComponent },
   { path: 'directive_filter', component: DirFilterComponent },
-  { path: 'rx_filter', component: RxFilterComponent }
+  { path: 'rx_filter', component: RxFilterComponent },
+  {
+    path:"lazy",
+    loadChildren:'../app/Lazzy/lazy.module#LazyModule'
+  },
+ 
+ 
+ 
+
+  
 
 
 ];

@@ -16,10 +16,12 @@ export class CommonService {
   {
     let apiURL = `https://jsonmock.hackerrank.com/datetime`;
     return this.http.get(apiURL)
-   // return  new Date()
-
   }
 
+  getApiData() : Observable<any> {
+    let url = `https://jsonplaceholder.typicode.com/posts`;
+    return this.http.get(url)
+  }
 
 
 

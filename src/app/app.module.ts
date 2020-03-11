@@ -16,6 +16,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatInputModule} from '@angular/material/input';
 import {MatChipsModule} from '@angular/material/chips';
 import { TestComponent } from './Date/test/test.component';
+import {  MatTableModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { TestComponent } from './Date/test/test.component';
     RxFilterComponent,
     FilterPipe,
     TestComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { TestComponent } from './Date/test/test.component';
     MatButtonModule,
     MatListModule,
     MatInputModule,
-    MatChipsModule
+    MatChipsModule,
+    MatTableModule
   ],
   providers: [CommonService],
   bootstrap: [AppComponent]

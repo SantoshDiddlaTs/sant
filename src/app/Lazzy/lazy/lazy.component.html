@@ -1,0 +1,47 @@
+<div class="col-md-12 text-center py-4">
+    <h1>Lazy Loading</h1>
+    <button  class="btn btn-primary mr-4" (click)="Factorial()"> Factorial</button>
+
+    <button class="btn btn-primary mr-4"  (click)="open('http://www.africau.edu/images/default/sample.pdf')">PDF Open </button>
+    <button class="btn btn-primary mr-4"  (click)="Charts()">Chart </button>
+    <button class="btn btn-primary"  [routerLink]="['/lazy/material']">Material  Table</button>
+
+    
+</div>
+<div class="row text-center ">
+    <div class="col-md-6" *ngIf="value">
+    <h4 >Factorial of 5 is <strong>{{value}}</strong></h4>
+    </div>
+    <div class="col-md-6" >
+        <figure class="highcharts-figure">
+            <div id="containerr" ></div>
+        </figure>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-6">
+        <table class="table" *ngIf='data'>
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Title</th>
+                <th scope="col">body</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor='let show of data'>
+                <th scope="row" >{{show.id}}</th>
+                <td>{{show.title}}</td>
+                <td>{{show.body}}</td>
+              </tr>
+            </tbody>
+          </table>
+          <p><strong>{{error}}</strong></p>
+    </div>
+
+    <div class="col-md-6">
+        
+    </div>
+</div>
