@@ -1,11 +1,17 @@
 <div class="col-md-12 text-center py-4">
     <h1>Lazy Loading</h1>
     <button  class="btn btn-primary mr-4" (click)="Factorial()"> Factorial</button>
+    <button  class="btn btn-primary mr-4" (click)="apiData()"> Basic Table</button>
 
-    <button class="btn btn-primary mr-4"  (click)="open('http://www.africau.edu/images/default/sample.pdf')">PDF Open </button>
-    <button class="btn btn-primary mr-4"  (click)="Charts()">Chart </button>
-    <button class="btn btn-primary"  [routerLink]="['/lazy/material']">Material  Table</button>
+    <button class="btn btn-primary mr-4"   [routerLink]="['/lazy/pdf']" >PDF file </button>
+    <button class="btn btn-primary mr-4"  (click)="chartsData()">Chart </button>
+    <button class="btn btn-primary mr-4"  [routerLink]="['/lazy/material']">Material  Table</button>
+    <button class="btn btn-primary mr-4"    [routerLink]="['/lazy/image']">Image Upload </button>
+    <button class="btn btn-primary mr-4"    [routerLink]="['/lazy/animation']">Animation</button>
 
+
+
+    
     
 </div>
 <div class="row text-center ">
@@ -13,9 +19,7 @@
     <h4 >Factorial of 5 is <strong>{{value}}</strong></h4>
     </div>
     <div class="col-md-6" >
-        <figure class="highcharts-figure">
-            <div id="containerr" ></div>
-        </figure>
+      <canvas id="bar-chart" width="800" height="450"></canvas>
     </div>
 </div>
 

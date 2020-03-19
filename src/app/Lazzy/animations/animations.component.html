@@ -1,0 +1,36 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h4 class="my-3">Amimation</h4>
+      <button  mat-raised-button (click)="changeState()">Change Size</button>
+      <div class="mt-5">
+        <div [@changeDivSize]=currentState></div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h4  class="my-3"> Animations In Lists</h4>
+      <button mat-raised-button (click)="toggle()">Show / Hide Items</button>
+      
+      <div [@listAnimation]="items.length"
+          (@listAnimation.start)="logAnimation($event)"
+          (@listAnimation.done)="logAnimation($event)"
+          class="mt-5"
+      >
+        <div>
+          <ul  *ngFor="let item of items">
+            <li class="bg-dark text-white px-2">{{ item }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
